@@ -2,22 +2,42 @@
 #include <conio.h>
 #include <locale.h>
 
-main()
-{
 
-	setlocale(LC_ALL, "Turkish");
-	int a=2, b=10, c=50;
-	float f=1.05, g=25.5, h=-0.1 ,yuzde;
+main(){
 	
-	printf("\nTAB kullanýlmadan yazýlan tamsayýlar : %d %d %d", a , b, c);
-	printf("\nTAB kullanýlarak yazýlan tamsayýlar  : \t%d \t%d \t%d", a, b, c);
+    int adet=9;
+    int bosluk=1;
+    for(int i=0; i<5; i++)
+    {
+    	for(int a=0; a<bosluk; a++)
+    		printf(" ");
+    	for(int j=0; j<adet; j++)
+    		printf("*");
+    		
+    	adet-=2;
+    	bosluk++;
+    	if(i!=4){
+    	    	printf("\n");	
+		}
+    	
+	}
 	
-	printf("\nÜç reel sayýnýn tek satýrda yazýlmasý : %f\t%f\t%f", f, g, h);
-	printf("\nÜç reel sayýnýn üç satýrda yazýlmasý : \n \n\t%f\n\t%f\n\t%f", f, g, h);
+    for(int i=0; i<=5; i++)
+    {
+    	for(int a=0; a<bosluk; a++)
+    		printf(" ");
+    	for(int j=0; j<adet; j++)
+    		printf("*");
+    		
+    	adet+=2;
+    	bosluk--;
+    	printf("\n");
+    	
+	}
+		
+    	getch();
+    	
+    	
+	}
+
 	
-	yuzde=(220*25)/100.0;
-	printf("\n220 ün %%25 i %f dir", yuzde);
-	printf("\n%f/%f iþleminin sonucu = %f\n", g, f, g / f);
-	
-	printf("\n program sonunda beep sesi çýkar...\a");
-}

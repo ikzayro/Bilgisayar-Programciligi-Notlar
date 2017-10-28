@@ -3,11 +3,17 @@
 
 main()
 {
-
-int sayi;
-printf("Bir sayi girin: ");
-scanf("%d",&sayi);
-printf("Girilen sayi=%d",sayi);
-getch();
+	int son=5;
+	for(int a=0; a<5; a++)
+	{
+		for(int i=1; i<=son; i++)
+			printf("%d",i);
+		
+		
+	son--;
+	printf("\n");
+	}
+	
+	getch();
 	
 }
